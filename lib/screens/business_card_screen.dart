@@ -7,6 +7,7 @@ class BusinessCardScreen extends StatelessWidget {
       backgroundColor: Colors.teal,
       body: SafeArea(
         child: Container(
+          //Check into mainAxisAlignment for spacing
           alignment: Alignment.center,
           child: Column(
             children: <Widget>[
