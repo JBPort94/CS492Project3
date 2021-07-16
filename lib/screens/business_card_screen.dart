@@ -11,7 +11,7 @@ class BusinessCardScreen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                height: 8,
+                height: 10,
               ),
               CircleAvatar(
                 radius: avatarSize(context),
