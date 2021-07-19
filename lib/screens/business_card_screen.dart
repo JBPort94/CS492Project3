@@ -20,6 +20,7 @@ class BusinessCardScreen extends StatelessWidget {
                 Text(
                   'Jeff Porter',
                   style: TextStyle(
+                    fontFamily: 'Yellowtail',
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
