@@ -9,17 +9,15 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Call Me Maybe',
-      theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-      ),
-      home: MainTabController()
-    );
+        title: 'Call Me Maybe',
+        theme: ThemeData(
+          primarySwatch: Colors.blueGrey,
+        ),
+        home: MainTabController());
   }
 }
 
 class MainTabController extends StatelessWidget {
-
   static const tabs = [
     Tab(icon: Icon(Icons.face)),
     Tab(icon: Icon(Icons.view_list)),
@@ -31,15 +29,13 @@ class MainTabController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
-      initialIndex: 0,
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Call Me Maybe'),
-          bottom: TabBar(tabs: tabs)
-        ),
-        body: TabBarView(children: screens)
-      )
-    );
+        length: 3,
+        initialIndex: 0,
+        child: Scaffold(
+            appBar: AppBar(
+                centerTitle: true,
+                title: Text('Call Me Maybe'),
+                bottom: TabBar(tabs: tabs)),
+            body: TabBarView(children: screens)));
   }
 }

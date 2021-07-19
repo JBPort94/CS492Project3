@@ -4,40 +4,46 @@ class BusinessCardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal,
-      body: SafeArea(
-        child: Container(
-          //Check into mainAxisAlignment for spacing
-          alignment: Alignment.center,
-          child: Column(
-            children: <Widget>[
-              Container(
-                height: 10,
-              ),
-              CircleAvatar(
-                radius: avatarSize(context),
-                backgroundColor: Colors.black,
-              ),
-              Text(
-                'Jeff Porter',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Container(
+            //Check into mainAxisAlignment for spacing
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                CircleAvatar(
+                  radius: avatarSize(context),
+                  backgroundColor: Colors.black,
+                  backgroundImage: AssetImage("assets/images/profilePic.jpg"),
                 ),
-              ),
-              Text(
-                'Jeff Porter',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                Text(
+                  'Jeff Porter',
+                  style: TextStyle(
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-
-            ],
+                Text(
+                  'Subpar Developer',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  '(777) 777-7777',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                contactRow(),
+              ],
+            ),
           ),
-        ),
-      )
-    );
+        ));
   }
 
   double avatarSize(BuildContext context) {
@@ -46,5 +52,23 @@ class BusinessCardScreen extends StatelessWidget {
     } else {
       return MediaQuery.of(context).size.width * 0.20;
     }
+  }
+
+  Widget contactRow() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Text('github.com/JBPort94',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 10,
+            )),
+        Text('portejef@oregonstate.edu',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 10,
+            ))
+      ],
+    );
   }
 }
