@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BusinessCardScreen extends StatelessWidget {
   @override
@@ -33,11 +34,14 @@ class BusinessCardScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                Text(
-                  '(777) 777-7777',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                GestureDetector(
+                  onTap: () => launch('sms:7777777777'),
+                  child: Text(
+                    '(777) 777-7777',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 contactRow(),
@@ -59,16 +63,22 @@ class BusinessCardScreen extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Text('github.com/JBPort94',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 10,
-            )),
-        Text('portejef@oregonstate.edu',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 10,
-            ))
+        GestureDetector(
+          onTap: () => launch('https://github.com/JBPort94'),
+          child: Text('github.com/JBPort94',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 10,
+              )),
+        ),
+        GestureDetector(
+          onTap: () => launch('mailto:portejef@oregonstate.edu'),
+          child: Text('portejef@oregonstate.edu',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 10,
+              )),
+        ),
       ],
     );
   }
