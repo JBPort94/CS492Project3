@@ -8,7 +8,6 @@ class BusinessCardScreen extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Container(
-            //Check into mainAxisAlignment for spacing
             alignment: Alignment.center,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -30,6 +29,8 @@ class BusinessCardScreen extends StatelessWidget {
                 Text(
                   'Subpar Developer',
                   style: TextStyle(
+                    fontFamily: 'PragatiNarrow',
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -39,6 +40,7 @@ class BusinessCardScreen extends StatelessWidget {
                   child: Text(
                     '(777) 777-7777',
                     style: TextStyle(
+                      fontFamily: 'PragatiNarrow',
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
@@ -53,7 +55,7 @@ class BusinessCardScreen extends StatelessWidget {
 
   double avatarSize(BuildContext context) {
     if (MediaQuery.of(context).orientation == Orientation.landscape) {
-      return MediaQuery.of(context).size.width * 0.1;
+      return MediaQuery.of(context).size.width * 0.075;
     } else {
       return MediaQuery.of(context).size.width * 0.20;
     }
