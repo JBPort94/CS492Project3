@@ -62,7 +62,10 @@ flutter:
   fonts:
     - family: Yellowtail
       fonts:
-        - asset: fonts/Yellowtail-Regular.ttf
+        - asset: assets/fonts/Yellowtail-Regular.ttf
+    - family: PragatiNarrow
+      fonts:
+        - asset: assets/fonts/PragatiNormal-Regular.ttf
         
   #
   # For details regarding fonts from package dependencies,
