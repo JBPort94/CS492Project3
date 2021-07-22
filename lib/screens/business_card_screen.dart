@@ -7,10 +7,11 @@ class BusinessCardScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
+          minimum: const EdgeInsets.all(16),
           child: Container(
             alignment: Alignment.center,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 CircleAvatar(
                   radius: avatarSize(context),
